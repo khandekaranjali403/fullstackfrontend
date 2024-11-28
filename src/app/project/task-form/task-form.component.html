@@ -1,0 +1,28 @@
+<div class="modal">
+  <div class="modal-content">
+    <form [formGroup]="taskForm" (ngSubmit)="handleSubmit()">
+      <p>Add New Task</p>
+      <div>
+        <label for="task-name">Task Name</label>
+        <input id="task-name" formControlName="name" />
+        @if (taskForm.get('name')?.invalid && taskForm.get('name')?.touched) {
+        <div>Task Name is required.</div>
+        }
+      </div>
+
+      <div>
+        <label for="task-name">Task Description</label>
+        <input id="task-description" formControlName="task-description" />
+      </div>
+
+      <div>
+        <label for="task-name">Task Due Date</label>
+        <input id="task-due-date" type="date" formControlName="date" />
+      </div>
+
+      <button class="cancel" type="button">Cancel</button>
+
+      <button class="Submit" [disabled]="taskForm.invalid" type="button">Submit</button>
+    </form>
+  </div>
+</div>

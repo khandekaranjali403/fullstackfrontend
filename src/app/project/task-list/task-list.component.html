@@ -1,0 +1,86 @@
+<div class="task-container">
+  <h2>Task List</h2>
+  <table class="task-table">
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.name }}</td>
+        <td>{{ task.completed ? "Completed" : "In Progress" }}</td>
+        <td>{{ task.dueDate | date : "yyyy-MM-dd" }}</td>
+
+        <!-- Checkbox to toggle completion -->
+        <input
+          type="checkbox"
+          [checked]="task.completed"
+          (change)="handleCheckbox(task.id)"
+          aria-label="Toggle completion"
+        />
+        <button
+          class="delete-task-button"
+          (click)="deleteTask(task.id)"
+          aria-label="Delete task"
+        >Delete
+        </button>
+        <!-- <button
+          class="update-task-button"
+          (click)="updateTask(task)"
+          aria-label="update task"
+        >Edit
+        </button> -->
+
+        <!-- No Tasks Message -->
+      </tr>
+
+      <tr *ngIf="tasks.length === 0">
+        <td colspan="4" class="no-tasks">No tasks available</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add New Task Button -->
+  <button class="add-task-button" (click)="openModal()">+ Add New Task</button>
+
+  <!-- Modal -->
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <h3>Add New Task</h3>
+      <form [formGroup]="taskForm" (ngSubmit)="addTask()">
+        <!-- Task Name -->
+        <label for="task-name">Task Name:</label>
+        <input
+          id="task-name"
+          formControlName="name"
+          placeholder="Enter task name"
+          required
+        />
+
+        <!-- Task Description -->
+        <label for="description">Task Description:</label>
+        <input
+          id="description"
+          formControlName="description"
+          type="text"
+          placeholder="Enter task description"
+          required
+        />
+
+        <!-- Due Date -->
+        <label for="due-date">Due Date:</label>
+        <input id="due-date" formControlName="dueDate" type="date" required />
+
+        <!-- Buttons -->
+        <div class="form-actions">
+          <button type="button" (click)="closeModal()">Cancel</button>
+          <button type="submit" [disabled]="taskForm.invalid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

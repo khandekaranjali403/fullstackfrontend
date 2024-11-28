@@ -1,0 +1,236 @@
+/* General Project Container */
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Container */
+.task-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.task-list{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Header Styling */
+.header h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.header .status span {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Task Table Styling */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.task-table th,
+.task-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.task-table th {
+    background-color: #4caf50;
+    color: white;
+    text-transform: uppercase;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.task-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+
+/* Add Task Button */
+.add-task-button {
+
+    margin-right: auto;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3403f8;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    text-align: right;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+    background-color: #3403f8;
+}
+/* Progress Bar Styling */
+.progress-bar {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Outer container for the progress bar */
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 15px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Inner filled progress bar */
+.progress-bar-fill {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Footer Styling (Optional for Entire Project) */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+/*new css
+
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-divider {
+    color: #888;
+}
+
+/* Status Dot Styling */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.in-progress {
+    background-color: #ff9800; /* Orange for In Progress */
+}
+
+.completed {
+    background-color: #4caf50; /* Green for Completed */
+}
+
+/* Table Styling */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.task-table th {
+    background-color: #4caf50;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.task-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.task-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Label Styling */
+label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Add Task Button Styling */
+.add-task-button {
+    display: block;
+    margin-right: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: right;
+    margin-right: 0%;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-button:hover {
+    background-color: #45a049;
+}
